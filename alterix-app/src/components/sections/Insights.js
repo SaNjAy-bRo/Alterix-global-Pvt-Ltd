@@ -16,10 +16,10 @@ export default function InsightsSection() {
       <div className="container mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
-            <h2 className="text-[#EA580C] font-black text-5xl uppercase mb-2">INSIGHTFUL</h2>
+            <h2 className="text-[#1F80B5] font-black text-5xl uppercase mb-2">INSIGHTFUL</h2>
             <div className="text-slate-900 font-bold text-xl">The latest findings and news from Alterix Global.</div>
           </div>
-          <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:border-[#EA580C] hover:text-[#EA580C] font-bold uppercase tracking-wider h-12 px-6">
+          <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:border-[#1F80B5] hover:text-[#1F80B5] font-bold uppercase tracking-wider h-12 px-6">
             View All Updates
           </Button>
         </div>
@@ -32,13 +32,13 @@ export default function InsightsSection() {
                    <div className="w-full h-full transform group-hover:scale-105 transition-transform duration-700 bg-cover bg-center" style={{ backgroundImage: `url('/assets/insight_img.png')` }}></div>
                 </div>
                 <CardContent className="p-8 flex-1 flex flex-col bg-white overflow-hidden relative">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-[#EA580C] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-[#1F80B5] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                   
-                  <div className="text-[#EA580C] text-xs font-extrabold uppercase mb-3 bg-[#EA580C]/10 inline-block px-3 py-1 rounded-full w-max">{item.cat}</div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-6 leading-snug lg:group-hover:text-[#EA580C] transition-colors duration-300">{item.title}</h3>
+                  <div className="text-[#1F80B5] text-xs font-extrabold uppercase mb-3 bg-[#1F80B5]/10 inline-block px-3 py-1 rounded-full w-max">{item.cat}</div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-6 leading-snug lg:group-hover:text-[#1F80B5] transition-colors duration-300">{item.title}</h3>
                   <div className="mt-auto flex justify-between items-center text-sm text-slate-500 border-t border-slate-100 pt-4">
                     <span className="font-medium tracking-wide">{item.date}</span>
-                    <ArrowUpRight className="w-5 h-5 text-slate-300 group-hover:text-[#EA580C] transition-colors duration-300" />
+                    <ArrowUpRight className="w-5 h-5 text-slate-300 group-hover:text-[#1F80B5] transition-colors duration-300" />
                   </div>
                 </CardContent>
               </Card>
