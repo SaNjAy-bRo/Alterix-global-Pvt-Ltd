@@ -2,8 +2,9 @@ import HeroSection from '@/components/sections/Hero';
 import WelcomeSection from '@/components/sections/Welcome';
 import StatsSection from '@/components/sections/Stats';
 import ServicesSection from '@/components/sections/Services';
-import CapabilitiesSection from '@/components/sections/Capabilities';
-import InsightsSection from '@/components/sections/Insights';
+import WhyChooseUs from '@/components/sections/WhyChooseUs';
+import IndustriesServed from '@/components/sections/IndustriesServed';
+import OurApproach from '@/components/sections/OurApproach';
 import CTASection from '@/components/sections/CTA';
 import ContactCTA from '@/components/sections/ContactCTA';
 
@@ -14,8 +15,9 @@ export default function Home() {
       <WelcomeSection />
       <StatsSection />
       <ServicesSection />
-      <CapabilitiesSection />
-      <InsightsSection />
+      <WhyChooseUs />
+      <IndustriesServed />
+      <OurApproach />
       <CTASection />
       <ContactCTA />
     </>

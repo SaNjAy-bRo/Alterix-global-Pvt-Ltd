@@ -1,59 +1,60 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ShieldCheck, Factory } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
 
 export default function HeroSection() {
   return (
-    <section className="relative flex items-center min-h-[90vh] lg:min-h-screen overflow-hidden bg-cover bg-center [clip-path:polygon(0_0,100%_0,100%_90%,0%_100%)] mb-[-10vh] pb-[10vh]" style={{ backgroundImage: "url('/assets/hero-bg.png')" }}>
-      {/* Overlay gradient to ensure the right side isn't completely raw if needed */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#002C49] via-[#002C49]/40 to-transparent"></div>
+    <section className="relative bg-white overflow-hidden [clip-path:polygon(0_0,100%_0,100%_94%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_90%,0_100%)] pb-8 lg:pb-24">
 
-      <div className="container mx-auto px-4 sm:px-8 relative z-10 pt-24 lg:pt-28 pb-8 flex w-full h-full items-center">
-        
-        {/* Massive geometric dark card for text holding */}
-        <div className="relative bg-[#002C49]/95 backdrop-blur-xl p-8 md:p-12 lg:p-16 w-full md:w-[90%] lg:w-[65%] [clip-path:polygon(0_0,100%_0,85%_100%,0_100%)] border-l-4 border-[#1F80B5] shadow-2xl">
-          
-          {/* Accent slash inside the card for extra geometric feel */}
-          <div className="absolute top-0 right-[15%] w-1 h-full bg-white/5 transform skew-x-[-15deg] pointer-events-none"></div>
-          
-          <div className="relative z-20">
-            <span className="inline-flex items-center gap-2 text-[#1F80B5] font-extrabold tracking-widest uppercase mb-4 text-xs md:text-sm border border-[#1F80B5]/30 bg-[#1F80B5]/10 py-1.5 px-3 rounded shadow-sm">
-              <Factory size={16} strokeWidth={2.5} /> IT & Non-IT Consulting
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] uppercase tracking-tighter mb-4 drop-shadow-xl bg-gradient-to-b from-[#7B9E5A] via-[#64B1C3] to-slate-100 bg-clip-text text-transparent w-fit">
-              <span className="font-bold">EMPOWERING</span> <span className="font-black">BUSINESSES</span><br />
-              <span className="font-bold pt-1 block">WITH TALENT, TECH &<br className="hidden sm:block" /> <span className="font-black">TRANSFORMATION.</span></span>
+      {/* ===== DESKTOP LAYOUT ===== */}
+      <div className="hidden lg:flex min-h-[85vh] items-center">
+        <div className="w-[50%] pl-[8%] pr-[4%] py-20">
+          <h1 className="text-5xl xl:text-6xl font-black leading-[1.12] tracking-tight mb-8 bg-gradient-to-b from-[#7B9E5A] to-[#64B1C3] bg-clip-text text-transparent">
+            IT & Non-IT Consulting, Staffing & Software Solutions
+          </h1>
+          <p className="text-base font-bold text-[#002C49] mb-10 max-w-lg leading-relaxed">
+            Innovative tech solutions and world-class staffing to help your business scale.
+          </p>
+          <div className="flex gap-4">
+            <Button size="lg" className="border-2 border-transparent bg-[#7B9E5A] text-white hover:bg-[#002C49] hover:border-[#002C49] px-8 py-6 text-sm uppercase tracking-widest font-bold transition-all duration-300 rounded">
+              Explore Services
+            </Button>
+            <Button size="lg" className="border-2 border-[#002C49] !bg-[#002C49] text-white hover:!bg-[#7B9E5A] hover:border-[#7B9E5A] px-8 py-6 text-sm uppercase tracking-widest font-bold transition-all duration-300 rounded">
+              Contact Us
+            </Button>
+          </div>
+        </div>
+        <div 
+          className="absolute top-0 right-0 w-[55%] h-full bg-cover bg-center [clip-path:polygon(12%_0,100%_0,100%_100%,0%_100%)]"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80')" }}
+        />
+      </div>
+
+      {/* ===== MOBILE LAYOUT ===== */}
+      <div className="lg:hidden relative min-h-[82vh]">
+        <div 
+          className="absolute top-0 left-0 w-full h-[92%] bg-cover bg-center [clip-path:polygon(0_0,100%_0,100%_88%,0_100%)]"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80')" }}
+        />
+        <div className="relative z-10 min-h-[82vh] flex items-center justify-center px-5 py-6">
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-7 text-center w-full max-w-sm">
+            <h1 className="text-[1.7rem] sm:text-3xl font-black leading-[1.2] tracking-tight mb-3 bg-gradient-to-b from-[#7B9E5A] to-[#64B1C3] bg-clip-text text-transparent">
+              IT & Non-IT Consulting, Staffing & Software Solutions
             </h1>
-            <div className="w-32 h-1.5 bg-gradient-to-r from-[#7B9E5A] to-[#64B1C3] mb-6"></div>
-            <p className="text-base md:text-lg lg:text-xl text-slate-300 mb-8 max-w-[85%] md:max-w-xl leading-relaxed font-medium pl-4 border-l-2 border-slate-700/80 shadow-sm">
-              Alterix Global is a leading IT and Non-IT consulting firm delivering innovative software development solutions and world-class staffing services to businesses worldwide. We help organizations scale efficiently by combining cutting-edge technology with highly skilled talent across diverse industries.
+            <p className="text-base font-bold text-[#002C49] mb-6 leading-relaxed">
+              Innovative tech solutions and world-class staffing to help your business scale.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-[#1F80B5] hover:bg-white hover:text-[#1F80B5] text-white px-6 md:px-8 py-6 text-sm md:text-base uppercase tracking-widest font-black transition-all duration-300 shadow-xl group border-none">
-                Partner with Alterix <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
+            <div className="flex flex-col gap-3">
+              <Button size="lg" className="border-2 border-transparent bg-[#7B9E5A] text-white hover:bg-[#002C49] hover:border-[#002C49] py-5 text-xs uppercase tracking-widest font-bold transition-all duration-300 rounded w-full">
+                Explore Services
               </Button>
-              <Button size="lg" className="bg-transparent border-2 border-white/50 text-white hover:bg-[#1F80B5] hover:border-[#1F80B5] hover:text-white px-6 py-6 text-sm md:text-base uppercase tracking-widest font-black shadow-lg transition-all duration-300">
-                Contact Sales
+              <Button size="lg" className="border-2 border-[#002C49] !bg-[#002C49] text-white hover:!bg-[#7B9E5A] hover:border-[#7B9E5A] py-5 text-xs uppercase tracking-widest font-bold transition-all duration-300 rounded w-full">
+                Contact Us
               </Button>
             </div>
           </div>
         </div>
-
-        {/* Floating secondary card overlapping the edge - properly pushed out so it doesn't block text */}
-        <Card className="hidden lg:flex absolute right-0 lg:right-[10%] bottom-[15%] bg-gradient-to-br from-[#1F80B5] to-[#C2410C] border-none text-white p-1 rounded-none [clip-path:polygon(12%_0,100%_0,88%_100%,0_100%)] shadow-2xl z-30 transform hover:-translate-y-2 transition-transform duration-500 cursor-pointer">
-          <CardContent className="p-6 lg:p-8 flex items-center gap-4 lg:gap-6">
-            <div className="bg-white/20 p-3 lg:p-4 rounded-full backdrop-blur-md shadow-inner">
-              <ShieldCheck size={32} strokeWidth={2} />
-            </div>
-            <div>
-              <div className="text-xl lg:text-2xl font-black uppercase tracking-widest drop-shadow-md">ISO 9001</div>
-              <div className="text-white/90 font-bold tracking-wider uppercase text-[0.65rem] lg:text-xs mt-1">Certified Global Facilities</div>
-            </div>
-          </CardContent>
-        </Card>
-
       </div>
+
     </section>
   );
 }

@@ -8,56 +8,57 @@ const services = [
   {
     id: 'it-software',
     title: 'IT & Software Development',
-    desc: 'We design and deliver scalable, high-performance software tailored to your business goals. From custom applications to enterprise systems, we ensure innovation meets execution.',
-    img: '/assets/service_eng.png'
+    desc: 'Scalable, high-performance software tailored to your business goals — from custom apps to enterprise systems.',
+    img: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80'
   },
   {
     id: 'staffing',
     title: 'Staffing & Recruitment',
-    desc: 'We help organizations hire the right talent at the right time through flexible hiring models: Temporary Staffing, Permanent Placement, and Contract-Based Hiring.',
-    img: '/assets/service_scm.png'
+    desc: 'Hire the right talent at the right time through flexible models: Temporary, Permanent, and Contract-Based.',
+    img: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80'
   },
   {
     id: 'rpo',
     title: 'Recruitment Process Outsourcing',
-    desc: 'Our RPO solutions streamline your hiring process end-to-end, acting as an extension of your internal HR team to improve efficiency and hiring quality.',
-    img: '/assets/service_mfg.png'
+    desc: 'End-to-end RPO solutions that streamline hiring and improve quality as an extension of your HR team.',
+    img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=80'
   },
   {
     id: 'msp',
     title: 'Managed Services (MSP)',
-    desc: 'We provide proactive, subscription-based managed services to oversee IT infrastructure, end-user systems, and workforce operations including IT infrastructure management.',
-    img: '/assets/insight_img.png'
+    desc: 'Proactive managed services to oversee IT infrastructure, end-user systems, and workforce operations.',
+    img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80'
   }
 ];
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-white py-16 pb-32">
-      <div className="container mx-auto px-8">
-        <div className="mb-12">
-          <h2 className="font-light text-5xl uppercase mb-4 bg-gradient-to-b from-[#7B9E5A] to-[#64B1C3] bg-clip-text text-transparent w-fit pb-1">
-            <span className="font-bold">OUR CORE</span> <span className="font-black">SERVICES</span>
+    <section id="services" className="bg-slate-50 py-24 lg:py-32">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl lg:text-5xl font-black text-[#002C49] mb-4 tracking-tight">
+            Our Core Services
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-[#7B9E5A] to-[#64B1C3] mb-4"></div>
-          <div className="text-[#002C49] font-bold text-xl">Empowering organizations with world-class talent and innovative technology</div>
+          <p className="text-base font-bold text-[#002C49] max-w-2xl mx-auto leading-relaxed">
+            Empowering organizations with world-class talent and innovative technology
+          </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
-            <Link href={`#${service.id}`} key={service.id} className="group block focus:outline-none focus:ring-4 focus:ring-[#1F80B5]/50 rounded">
-              <Card className="relative h-[550px] bg-cover bg-center overflow-hidden flex flex-col justify-end border-none rounded-none transition-transform duration-500 cursor-pointer shadow-none hover:shadow-2xl hover:-translate-y-2" style={{ backgroundImage: `url(${service.img})` }}>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#002C49]/95 via-[#002C49]/50 to-transparent z-10 transition-all duration-500 group-hover:from-[#002C49] group-hover:via-[#002C49]/80"></div>
+            <Link href={`#${service.id}`} key={service.id} className="group block">
+              <Card className="relative h-[480px] bg-cover bg-center overflow-hidden flex flex-col justify-end border-none rounded-2xl transition-all duration-500 cursor-pointer shadow-lg hover:shadow-2xl hover:-translate-y-2" style={{ backgroundImage: `url(${service.img})` }}>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#002C49] via-[#002C49]/80 lg:via-[#002C49]/40 to-transparent z-10 transition-all duration-500 lg:group-hover:from-[#002C49] lg:group-hover:via-[#002C49]/80"></div>
                 
-                <div className="relative z-20 text-white p-10 lg:p-12 w-full transform translate-y-12 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                  <h3 className="text-3xl font-extrabold mb-4 border-l-4 border-transparent group-hover:border-[#1F80B5] pl-0 group-hover:pl-4 transition-all duration-300">{service.title}</h3>
+                <div className="relative z-20 text-white p-8 transform translate-y-0 lg:translate-y-8 lg:group-hover:translate-y-0 transition-transform duration-500">
+                  <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
                   
-                  <div className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[300px] transition-all duration-500 overflow-hidden ease-out">
-                    <p className="text-slate-300 text-lg leading-relaxed mb-8">
+                  <div className="max-h-[200px] opacity-100 lg:opacity-0 lg:max-h-0 lg:group-hover:opacity-100 lg:group-hover:max-h-[200px] transition-all duration-500 overflow-hidden">
+                    <p className="text-base font-bold text-white leading-relaxed mb-6">
                       {service.desc}
                     </p>
-                    <Button className="bg-[#1F80B5] hover:bg-white hover:text-[#1F80B5] text-white font-bold uppercase tracking-widest transition-all duration-300 rounded-sm mt-4 lg:mt-0">
-                      Learn More <ChevronRight className="ml-2 w-4 h-4" />
+                    <Button size="sm" className="bg-[#7B9E5A] hover:bg-white hover:text-[#7B9E5A] text-white font-bold uppercase tracking-wider text-xs rounded">
+                      Learn More <ChevronRight className="ml-1 w-4 h-4" />
                     </Button>
                   </div>
                 </div>

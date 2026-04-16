@@ -1,31 +1,94 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
 
 export default function WelcomeSection() {
   return (
-    <section className="flex flex-col lg:flex-row relative min-h-[70vh] bg-white pt-[5vh]">
-      <div className="flex-1 px-8 lg:pl-[10%] lg:pr-[5%] py-20 flex flex-col justify-center relative z-10">
-        <h2 className="text-5xl md:text-7xl font-light uppercase mb-2 leading-none bg-gradient-to-b from-[#7B9E5A] to-[#64B1C3] bg-clip-text text-transparent w-fit pb-1">
-          <span className="font-bold">WHO</span> <span className="font-black">WE ARE</span>
-        </h2>
-        <div className="w-24 h-1.5 bg-gradient-to-r from-[#7B9E5A] to-[#64B1C3] mb-6"></div>
-        <h3 className="text-slate-900 text-3xl md:text-4xl font-extrabold mb-8 text-[#002C49]">Welcome to Alterix Global!</h3>
-        <p className="text-slate-500 text-lg md:text-xl leading-relaxed mb-10 max-w-full lg:max-w-[90%]">
-          Headquartered in Texas, Alterix Global is a trusted global recruitment and consulting partner specializing in IT solutions, workforce management, and business optimization services. We connect organizations with highly qualified professionals while providing strategic support through advanced technology and flexible service models. Our mission is simple: enable businesses to operate smarter, faster, and more efficiently.
-        </p>
-        <div className="flex items-center gap-6">
-          <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:border-[#1F80B5] hover:bg-[#1F80B5] hover:text-white px-8 py-6 text-base font-bold uppercase tracking-wider transition-all duration-300 group">
-            Our History <ArrowRight className="ml-2 w-5 h-5 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+    <section id="about" className="bg-white -mt-16 lg:mt-0 relative z-20 pt-0 pb-20 lg:py-28">
+      <div className="container mx-auto px-6 md:px-12">
+
+        {/* ===== MOBILE: Heading on top, then images, then text ===== */}
+        <div className="lg:hidden">
+          <h3 className="text-[#7B9E5A] font-bold text-sm uppercase tracking-widest mb-3">
+            Who We Are
+          </h3>
+          <h2 className="text-3xl sm:text-4xl font-black text-[#002C49] mb-8 leading-[1.12] tracking-tight">
+            Empowering Businesses with Talent, Technology & Transformation
+          </h2>
+
+          {/* Circular Images */}
+          <div className="relative w-full flex justify-center items-center mb-10 min-h-[280px] sm:min-h-[350px]">
+            <div className="relative w-[230px] h-[230px] sm:w-[300px] sm:h-[300px] rounded-full overflow-hidden border-8 border-white shadow-2xl z-10">
+              <div 
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80')" }}
+              />
+            </div>
+            <div className="absolute bottom-0 right-[8%] w-[100px] h-[100px] sm:w-[140px] sm:h-[140px] rounded-full overflow-hidden border-[6px] border-white shadow-xl z-20">
+              <div 
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=400&q=80')" }}
+              />
+            </div>
+          </div>
+
+          {/* Text Content */}
+          <p className="text-base font-bold text-[#002C49] leading-relaxed mb-4">
+            Headquartered in Texas, Alterix Global is a trusted global recruitment and consulting partner specializing in IT solutions, workforce management, and business optimization services.
+          </p>
+          <p className="text-base font-bold text-[#002C49] leading-relaxed mb-4">
+            We connect organizations with highly qualified professionals while providing strategic support through advanced technology and flexible service models. Our mission is simple: enable businesses to operate smarter, faster, and more efficiently.
+          </p>
+          <p className="text-base font-bold text-[#7B9E5A] mb-8">
+            Looking to grow faster? Hire smarter. Build better. Partner with Alterix Global.
+          </p>
+          <Button size="lg" className="border-2 border-[#7B9E5A] bg-[#7B9E5A] text-white hover:bg-transparent hover:text-[#7B9E5A] px-8 py-6 text-sm uppercase tracking-widest font-bold transition-all duration-300 rounded">
+            Learn More
           </Button>
         </div>
-      </div>
-      <div className="flex-1 bg-cover bg-center min-h-[40vh] lg:min-h-full [clip-path:polygon(0_10%,100%_0,100%_100%,0%_100%)] lg:[clip-path:polygon(15%_0,100%_0,100%_100%,0%_100%)] relative opacity-95 group" style={{ backgroundImage: "url('/assets/welcome_img.png')" }}>
-        {/* Floating Geometric Badge */}
-        <div className="absolute top-[20%] left-[30%] lg:left-[5%] bg-white p-6 shadow-2xl z-20 flex flex-col items-center justify-center [clip-path:polygon(10%_0,100%_0,90%_100%,0_100%)] hover:scale-105 transition-transform duration-500 min-w-[200px] border-b-4 border-[#7B9E5A]">
-           <div className="text-[#1F80B5] font-black text-5xl mb-1">1998</div>
-           <div className="text-slate-500 text-sm font-bold tracking-widest uppercase border-t-2 border-slate-100 pt-2 w-full text-center">Established</div>
+
+        {/* ===== DESKTOP: Side by side ===== */}
+        <div className="hidden lg:flex items-center gap-20">
+
+          {/* Left Side: Overlapping Circular Images */}
+          <div className="flex-1 w-full relative min-h-[550px] flex justify-center items-center">
+            <div className="relative w-[460px] h-[460px] rounded-full overflow-hidden border-8 border-white shadow-2xl z-10">
+              <div 
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80')" }}
+              />
+            </div>
+            <div className="absolute bottom-0 right-[10%] w-[220px] h-[220px] rounded-full overflow-hidden border-8 border-white shadow-xl z-20">
+              <div 
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=400&q=80')" }}
+              />
+            </div>
+          </div>
+
+          {/* Right Side: Text Content */}
+          <div className="flex-1 w-full">
+            <h3 className="text-[#7B9E5A] font-bold text-sm uppercase tracking-widest mb-4">
+              Who We Are
+            </h3>
+            <h2 className="text-[2.75rem] font-black text-[#002C49] mb-6 leading-[1.12] tracking-tight">
+              Empowering Businesses with Talent, Technology & Transformation
+            </h2>
+            <p className="text-base font-bold text-[#002C49] leading-relaxed mb-5">
+              Headquartered in Texas, Alterix Global is a trusted global recruitment and consulting partner specializing in IT solutions, workforce management, and business optimization services.
+            </p>
+            <p className="text-base font-bold text-[#002C49] leading-relaxed mb-5">
+              We connect organizations with highly qualified professionals while providing strategic support through advanced technology and flexible service models. Our mission is simple: enable businesses to operate smarter, faster, and more efficiently.
+            </p>
+            <p className="text-base font-bold text-[#7B9E5A] mb-8">
+              Looking to grow faster? Hire smarter. Build better. Partner with Alterix Global.
+            </p>
+            <Button size="lg" className="border-2 border-[#7B9E5A] bg-[#7B9E5A] text-white hover:bg-transparent hover:text-[#7B9E5A] px-8 py-6 text-sm uppercase tracking-widest font-bold transition-all duration-300 rounded">
+              Learn More
+            </Button>
+          </div>
+
         </div>
+
       </div>
     </section>
   );
