@@ -30,7 +30,7 @@ export default function Navbar() {
       <nav className={`sticky top-0 left-0 w-full transition-all duration-300 z-[1000] border-b ${scrolled ? 'bg-[#002C49] shadow-lg py-4 border-white/10' : 'bg-[#002C49] py-5 border-white/10'}`}>
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center text-white">
           <Link href="/" className="text-2xl font-black uppercase tracking-wider flex items-center gap-2">
-            <span className="bg-gradient-to-b from-[#7B9E5A] to-[#64B1C3] bg-clip-text text-transparent pb-1">Alterix<span className="font-light">Global</span></span>
+            <span className="pb-1"><span className="text-white">Alterix</span><span className="text-[#7B9E5A] font-light">Global</span></span>
           </Link>
 
           {/* Mobile menu button */}

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16 mb-16">
         <div className="lg:col-span-2 pr-0 lg:pr-8">
           <div className="flex items-center gap-2 text-3xl font-black uppercase mb-6">
-             <span className="bg-gradient-to-b from-[#7B9E5A] to-[#64B1C3] bg-clip-text text-transparent pb-1">Alterix<span className="font-light">Global</span></span>
+             <span className="pb-1"><span className="text-white">Alterix</span><span className="text-[#7B9E5A] font-light">Global</span></span>
           </div>
           <p className="text-slate-400 leading-relaxed mb-8">
             Your trusted partner for IT consulting, staffing solutions, and software development. 
