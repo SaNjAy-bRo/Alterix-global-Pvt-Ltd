@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, Globe, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Navbar() {
@@ -59,9 +59,7 @@ export default function Navbar() {
               Careers<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7B9E5A] transition-all group-hover:w-full"></span>
             </Link>
             
-            <div className="flex items-center gap-6 ml-8 pl-8 border-l border-white/20">
-              <button className="text-slate-300 hover:text-[#7B9E5A] transition-colors" aria-label="Search"><Search size={20} /></button>
-              <button className="text-slate-300 hover:text-[#7B9E5A] transition-colors" aria-label="Region"><Globe size={20} /></button>
+            <div className="flex items-center ml-8 pl-8 border-l border-white/20">
               <Button className="bg-[#7B9E5A] hover:bg-[#002C49] text-white uppercase tracking-wider font-bold">Contact</Button>
             </div>
           </div>
