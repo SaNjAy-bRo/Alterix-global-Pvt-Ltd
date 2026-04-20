@@ -48,7 +48,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-[#F8F9FA]">
+    <main className="min-h-screen bg-[#F8F9FA] overflow-x-hidden">
       {/* HERO SECTION */}
       <section className="relative overflow-hidden bg-white [clip-path:polygon(0_0,100%_0,100%_90%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_80%,0_100%)] pb-32 pt-28">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80')] bg-cover mask-image-gradient-left hidden lg:block" />

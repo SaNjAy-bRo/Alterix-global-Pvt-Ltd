@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[#F8F9FA] pt-24">
+    <main className="min-h-screen bg-[#F8F9FA] pt-24 overflow-x-hidden">
       {/* HERO SECTION */}
       <section className="relative overflow-hidden bg-[#002C49] text-white [clip-path:polygon(0_0,100%_0,100%_90%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_80%,0_100%)] pb-32 pt-16">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80')] opacity-10 bg-cover bg-center mix-blend-overlay" />

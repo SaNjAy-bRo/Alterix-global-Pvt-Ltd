@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function CareersPage() {
   return (
-    <main className="min-h-screen bg-[#F8F9FA]">
+    <main className="min-h-screen bg-[#F8F9FA] overflow-x-hidden">
       {/* HERO SECTION */}
       <section className="relative overflow-hidden bg-white [clip-path:polygon(0_0,100%_0,100%_90%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_80%,0_100%)] pb-32 pt-28">
         <div className="absolute inset-0 bg-[#002C49]">

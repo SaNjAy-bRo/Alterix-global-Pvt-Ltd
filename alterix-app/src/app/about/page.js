@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#F8F9FA]">
+    <main className="min-h-screen bg-[#F8F9FA] overflow-x-hidden">
       {/* HERO SECTION */}
       <section className="relative overflow-hidden bg-white [clip-path:polygon(0_0,100%_0,100%_90%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_85%,0_100%)] pb-24 pt-28">
         <div className="container mx-auto px-6 relative z-10">
@@ -33,7 +33,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right Image */}
-            <div className="lg:w-1/2 w-full">
+            <div className="lg:w-1/2 w-full overflow-hidden">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#7B9E5A] to-[#64B1C3] rounded-3xl transform rotate-3 scale-105 opacity-20 blur-lg animate-pulse" />
                 <img 
@@ -141,7 +141,7 @@ export default function AboutPage() {
       </section>
 
       {/* TEAM & EXPERTISE */}
-      <section className="py-24">
+      <section className="py-24 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="mb-20 text-center max-w-4xl mx-auto relative">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[150px] font-black opacity-5 text-gray-200 pointer-events-none select-none z-0">
