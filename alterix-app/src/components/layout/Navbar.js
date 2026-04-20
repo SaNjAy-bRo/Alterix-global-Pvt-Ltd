@@ -49,10 +49,10 @@ export default function Navbar() {
             <Link href="/" className="text-sm font-bold uppercase tracking-widest hover:text-[#7B9E5A] transition-colors relative group">
               Home<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7B9E5A] transition-all group-hover:w-full"></span>
             </Link>
-            <Link href="#about" className="text-sm font-bold uppercase tracking-widest hover:text-[#7B9E5A] transition-colors relative group">
+            <Link href="/about" className="text-sm font-bold uppercase tracking-widest hover:text-[#7B9E5A] transition-colors relative group">
               About Us<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7B9E5A] transition-all group-hover:w-full"></span>
             </Link>
-            <Link href="#services" className="text-sm font-bold uppercase tracking-widest hover:text-[#7B9E5A] transition-colors relative group">
+            <Link href="/services" className="text-sm font-bold uppercase tracking-widest hover:text-[#7B9E5A] transition-colors relative group">
               Services<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7B9E5A] transition-all group-hover:w-full"></span>
             </Link>
             <Link href="/careers" className="text-sm font-bold uppercase tracking-widest hover:text-[#7B9E5A] transition-colors relative group">
@@ -60,7 +60,9 @@ export default function Navbar() {
             </Link>
             
             <div className="flex items-center ml-8 pl-8 border-l border-white/20">
-              <Button className="bg-[#7B9E5A] hover:bg-[#002C49] text-white uppercase tracking-wider font-bold">Contact</Button>
+              <Link href="/contact">
+                <Button className="bg-[#7B9E5A] hover:bg-[#002C49] text-white uppercase tracking-wider font-bold">Contact</Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -71,17 +73,19 @@ export default function Navbar() {
             <Link href="/" onClick={handleLinkClick} className="py-3 px-4 text-sm font-bold uppercase tracking-widest text-white hover:text-[#7B9E5A] hover:bg-white/5 rounded-lg transition-all">
               Home
             </Link>
-            <Link href="#about" onClick={handleLinkClick} className="py-3 px-4 text-sm font-bold uppercase tracking-widest text-white hover:text-[#7B9E5A] hover:bg-white/5 rounded-lg transition-all">
+            <Link href="/about" onClick={handleLinkClick} className="py-3 px-4 text-sm font-bold uppercase tracking-widest text-white hover:text-[#7B9E5A] hover:bg-white/5 rounded-lg transition-all">
               About Us
             </Link>
-            <Link href="#services" onClick={handleLinkClick} className="py-3 px-4 text-sm font-bold uppercase tracking-widest text-white hover:text-[#7B9E5A] hover:bg-white/5 rounded-lg transition-all">
+            <Link href="/services" onClick={handleLinkClick} className="py-3 px-4 text-sm font-bold uppercase tracking-widest text-white hover:text-[#7B9E5A] hover:bg-white/5 rounded-lg transition-all">
               Services
             </Link>
             <Link href="/careers" onClick={handleLinkClick} className="py-3 px-4 text-sm font-bold uppercase tracking-widest text-white hover:text-[#7B9E5A] hover:bg-white/5 rounded-lg transition-all">
               Careers
             </Link>
-            <div className="mt-3 px-4">
-              <Button className="bg-[#7B9E5A] hover:bg-[#002C49] text-white uppercase tracking-wider font-bold w-full py-6">Contact</Button>
+            <div className="mt-3 px-4 flex flex-col">
+              <Link href="/contact" onClick={handleLinkClick}>
+                <Button className="bg-[#7B9E5A] hover:bg-[#002C49] text-white uppercase tracking-wider font-bold w-full py-6">Contact</Button>
+              </Link>
             </div>
           </div>
         </div>
